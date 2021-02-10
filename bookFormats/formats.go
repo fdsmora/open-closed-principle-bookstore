@@ -1,7 +1,7 @@
 package bookFormats
 
 const (
-	AUDIOBOOK = iota
-	PAPERBACK
-	EBOOK
+	AUDIOBOOK = "AUDIOBOOK"
+	PAPERBACK = "PAPERBACK"
+	EBOOK     = "EBOOK"
 )
