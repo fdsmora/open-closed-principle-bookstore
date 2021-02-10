@@ -1,14 +1,13 @@
 package main
 
 import (
-	"bookstore/book"
 	"bookstore/bookFormats"
-	"fmt"
+	"bookstore/orders"
 )
 
 func main() {
 
-	booksInfo := [3]book.BookInfoEntry{
+	booksInfo := []orders.BookInfoEntry{
 		{
 			"Title":     "El Principito",
 			"Publisher": "Porrua",
@@ -26,7 +25,10 @@ func main() {
 		},
 	}
 
-	bookOrders := book.GenerateOrders(booksInfo)
-	fmt.Println(bookOrders)
+	bookOrders := orders.GenerateOrders(booksInfo)
+
+	for _, order := range bookOrders {
+		order.BookSupplier(order.Book)
+	}
 
 }
