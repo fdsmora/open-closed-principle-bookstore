@@ -10,7 +10,7 @@ import (
 type BookInfoEntry map[string]string
 
 type BookOrder struct {
-	Book         *book.Book
+	Book         book.Book
 	BookSupplier suppliers.BookSupplier
 }
 
